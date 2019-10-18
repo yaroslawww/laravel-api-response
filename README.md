@@ -1,5 +1,13 @@
 # Submitting structured responses is easy
 
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Build Status](https://travis-ci.org/yaroslawww/laravel-api-response.svg?branch=master)](https://travis-ci.org/yaroslawww/laravel-api-response) 
+[![StyleCI](https://github.styleci.io/repos/195302588/shield?branch=master&style=flat-square)](https://github.styleci.io/repos/216011310)
+[![Quality Score](https://img.shields.io/scrutinizer/g/yaroslawww/laravel-api-response.svg?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-api-response/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/yaroslawww/laravel-api-response/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-api-response/?branch=master)
+[![PHP Version](https://img.shields.io/travis/php-v/yaroslawww/laravel-api-response.svg?style=flat-square)](https://packagist.org/packages/yaroslawww/laravel-api-response)
+[![Packagist Version](https://img.shields.io/packagist/v/yaroslawww/laravel-api-response.svg)](https://packagist.org/packages/yaroslawww/laravel-api-response)
+
 ## Installation
 
 You can install the package via composer:
