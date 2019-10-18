@@ -1,7 +1,7 @@
 <?php
 
 return [
-    /**
+    /*
      * Available options (default values):
      * 'options' => [
      *      'include_message' => true,
@@ -16,7 +16,7 @@ return [
      */
     'options' => [],
 
-    /**
+    /*
      * Api version
      * By default used env API_VERSION or if not defined then 0
      */

@@ -2,9 +2,9 @@
 
 namespace Gcsc\LaravelApiResponse;
 
-use HttpStatusCodes\RFCStatusCodes;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Str;
+use Illuminate\Http\JsonResponse;
+use HttpStatusCodes\RFCStatusCodes;
 
 class ApiResponse
 {
@@ -43,23 +43,23 @@ class ApiResponse
 
     public function __call($name, $arguments)
     {
-        if (defined($this->statusCodesClass . '::HTTP_' . Str::upper(Str::snake($name)))) {
-            $code = (int)constant($this->statusCodesClass . '::HTTP_' . Str::upper(Str::snake($name)));
+        if (defined($this->statusCodesClass.'::HTTP_'.Str::upper(Str::snake($name)))) {
+            $code = (int) constant($this->statusCodesClass.'::HTTP_'.Str::upper(Str::snake($name)));
             // $data
-            if (!isset($arguments[0])) {
+            if (! isset($arguments[0])) {
                 $data = null;
-            } elseif (!is_array($arguments[0])) {
+            } elseif (! is_array($arguments[0])) {
                 throw new \InvalidArgumentException('Data should type of array');
             } else {
                 $data = $arguments[0];
             }
 
             // $message
-            if (!isset($arguments[1])) {
+            if (! isset($arguments[1])) {
                 $manager = new \HttpStatusCodes\StatusCodeManager();
                 $statusCode = $manager->makeStatusCode($code);
                 $message = $statusCode->getMessage();
-            } elseif (!is_string($arguments[1])) {
+            } elseif (! is_string($arguments[1])) {
                 throw new \InvalidArgumentException('Message should type of string');
             } else {
                 $message = $arguments[1];
@@ -70,7 +70,7 @@ class ApiResponse
             return call_user_func_array([$this, 'send'], [$data, $code]);
         }
 
-        throw new \BadMethodCallException('Static method: "' . $name . '" not exists');
+        throw new \BadMethodCallException('Static method: "'.$name.'" not exists');
     }
 
     protected function generateDefaultMeta()
@@ -80,12 +80,12 @@ class ApiResponse
         }
 
         if (is_callable($this->defaultMeta)) {
-            return (array)($this->defaultMeta)();
+            return (array) ($this->defaultMeta)();
         }
 
         return [
             'version' => env('API_VERSION', config('laravel-api-response.api_version', '0')),
-            'environment' => app()->environment()
+            'environment' => app()->environment(),
         ];
     }
 
@@ -135,7 +135,7 @@ class ApiResponse
 
     public function includeMessage($includeMessage)
     {
-        $this->includeMessage = (bool)$includeMessage;
+        $this->includeMessage = (bool) $includeMessage;
 
         return $this;
     }
@@ -149,7 +149,7 @@ class ApiResponse
 
     public function includeMeta($includeMeta)
     {
-        $this->includeMeta = (bool)$includeMeta;
+        $this->includeMeta = (bool) $includeMeta;
 
         return $this;
     }
@@ -170,7 +170,7 @@ class ApiResponse
 
     public function dataOnTopLevel($dataOnTopLevel)
     {
-        $this->dataOnTopLevel = (bool)$dataOnTopLevel;
+        $this->dataOnTopLevel = (bool) $dataOnTopLevel;
 
         return $this;
     }
@@ -265,5 +265,4 @@ class ApiResponse
 
         return $this;
     }
-
 }

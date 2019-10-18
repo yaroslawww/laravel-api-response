@@ -2,14 +2,13 @@
 
 namespace Gcsc\LaravelApiResponse\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Gcsc\LaravelApiResponse\ApiResponse;
 use Gcsc\LaravelApiResponse\Tests\Fixtures\App;
 use Illuminate\Contracts\Routing\ResponseFactory;
-use PHPUnit\Framework\TestCase;
 
 class DefaultConfigurationTest extends TestCase
 {
-
     use \phpmock\phpunit\PHPMock;
 
     /** @test */
@@ -22,7 +21,6 @@ class DefaultConfigurationTest extends TestCase
         $app = $this->getFunctionMock('Gcsc\LaravelApiResponse', 'app');
         $app->expects($this->once())->willReturn(new App());
 
-
         $jsonResponse = $this->getMockBuilder('Illuminate\Http\JsonResponse')->getMock();
         $mock = $this->createMock(ResponseFactory::class);
         $mock->expects($this->once())
@@ -31,7 +29,7 @@ class DefaultConfigurationTest extends TestCase
                 'data' => [],
                 'meta' => [
                     'version' => 0,
-                    'environment' => 'test'
+                    'environment' => 'test',
                 ],
                 'message' => 'OK',
             ])
