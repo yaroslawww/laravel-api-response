@@ -18,6 +18,8 @@
     ],
     "require": {
         "php": "^7.2",
+        "illuminate/console": "^5.8.15|^6.0",
+        "illuminate/http": "^5.8.15|^6.0",
         "illuminate/support": "^5.8.15|^6.0",
         "yaroslawww/http-statuscodes": "^0.0.1"
     },
