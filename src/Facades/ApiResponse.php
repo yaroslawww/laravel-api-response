@@ -6,8 +6,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class ApiResponse
- * @package Gcsc\LaravelApiResponse\Facades
+ * Class ApiResponse.
  *
  * @method  static JsonResponse continue(array $data = [], string $message = null)
  * @method  static JsonResponse switchingProtocols(array $data = [], string $message = null)
