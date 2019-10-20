@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands\Cache;
 
-use Illuminate\Console\Command;
-use Illuminate\Support\Str;
 use ReflectionClass;
+use Illuminate\Support\Str;
+use Illuminate\Console\Command;
 
 class GenerateCommentsDocData extends Command
 {
