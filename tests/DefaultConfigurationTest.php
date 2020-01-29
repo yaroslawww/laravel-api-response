@@ -2,10 +2,10 @@
 
 namespace Gcsc\LaravelApiResponse\Tests;
 
-use PHPUnit\Framework\TestCase;
 use Gcsc\LaravelApiResponse\ApiResponse;
 use Gcsc\LaravelApiResponse\Tests\Fixtures\App;
 use Illuminate\Contracts\Routing\ResponseFactory;
+use PHPUnit\Framework\TestCase;
 
 class DefaultConfigurationTest extends TestCase
 {

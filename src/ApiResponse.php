@@ -2,9 +2,9 @@
 
 namespace Gcsc\LaravelApiResponse;
 
-use Illuminate\Support\Str;
-use Illuminate\Http\JsonResponse;
 use HttpStatusCodes\RFCStatusCodes;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Str;
 
 /**
  * Class ApiResponse.
