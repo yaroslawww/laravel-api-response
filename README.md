@@ -27,6 +27,19 @@ Route::get('/', function (Request $request) {
     $note = Note::create(['text' => $request->text]);
     return ApiResponse::created($note, 'New note created!');
 });
+```
+
+```bash
+>>> (string)ApiResponse::setMessage('Page expired')->send([], 419);
+=> """
+   HTTP/1.0 419 unknown status\r\n
+   Cache-Control: no-cache, private\r\n
+   Content-Type:  application/json\r\n
+   Date:          Wed, 29 Jan 2020 14:06:07 GMT\r\n
+   \r\n
+   {"data":["ass"],"meta":{"version":"0","environment":"development"},"message":"Page expired"}
+   """
+```
 
 ### Testing
 
