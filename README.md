@@ -15,6 +15,11 @@ You can install the package via composer:
 ```bash
 composer require yaroslawww/laravel-api-response
 ```
+```env
+# .env
+API_VERSION="1.1"
+```
+
 ## Usage
 
 ```php
@@ -37,7 +42,7 @@ Route::get('/', function (Request $request) {
    Content-Type:  application/json\r\n
    Date:          Wed, 29 Jan 2020 14:06:07 GMT\r\n
    \r\n
-   {"data":["ass"],"meta":{"version":"0","environment":"development"},"message":"Page expired"}
+   {"data":[],"meta":{"version":"1.1","environment":"development"},"message":"Page expired"}
    """
 ```
 
