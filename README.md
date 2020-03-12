@@ -2,7 +2,7 @@
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://travis-ci.org/yaroslawww/laravel-api-response.svg?branch=master)](https://travis-ci.org/yaroslawww/laravel-api-response) 
-[![StyleCI](https://github.styleci.io/repos/195302588/shield?branch=master&style=flat-square)](https://github.styleci.io/repos/216011310)
+[![StyleCI](https://github.styleci.io/repos/216011310/shield?branch=master&style=flat-square)](https://github.styleci.io/repos/216011310)
 [![Quality Score](https://img.shields.io/scrutinizer/g/yaroslawww/laravel-api-response.svg?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-api-response/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/yaroslawww/laravel-api-response/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-api-response/?branch=master)
 [![PHP Version](https://img.shields.io/travis/php-v/yaroslawww/laravel-api-response.svg?style=flat-square)](https://packagist.org/packages/yaroslawww/laravel-api-response)
@@ -15,6 +15,11 @@ You can install the package via composer:
 ```bash
 composer require yaroslawww/laravel-api-response
 ```
+```env
+# .env
+API_VERSION="1.1"
+```
+
 ## Usage
 
 ```php
@@ -27,6 +32,19 @@ Route::get('/', function (Request $request) {
     $note = Note::create(['text' => $request->text]);
     return ApiResponse::created($note, 'New note created!');
 });
+```
+
+```bash
+>>> (string)ApiResponse::setMessage('Page expired')->send([], 419);
+=> """
+   HTTP/1.0 419 unknown status\r\n
+   Cache-Control: no-cache, private\r\n
+   Content-Type:  application/json\r\n
+   Date:          Wed, 29 Jan 2020 14:06:07 GMT\r\n
+   \r\n
+   {"data":[],"meta":{"version":"1.1","environment":"development"},"message":"Page expired"}
+   """
+```
 
 ### Testing
 
