@@ -70,6 +70,12 @@ use Illuminate\Support\Facades\Facade;
  * @method  static JsonResponse loopDetected(array $data = [], string $message = null)
  * @method  static JsonResponse notExtended(array $data = [], string $message = null)
  * @method  static JsonResponse networkAuthenticationRequired(array $data = [], string $message = null)
+ * @method  static \Gcsc\LaravelApiResponse\ApiResponse setMeta(array $meta, bool $withoutDefault = false)
+ * @method  static \Gcsc\LaravelApiResponse\ApiResponse setData(array $data)
+ * @method  static \Gcsc\LaravelApiResponse\ApiResponse setMessage(string $message)
+ * @method  static \Gcsc\LaravelApiResponse\ApiResponse setCode(int $code)
+ * @method  static \Gcsc\LaravelApiResponse\ApiResponse setHeaders(array $headers)
+ * @method  static \Gcsc\LaravelApiResponse\ApiResponse setOptions($options)
  */
 class ApiResponse extends Facade
 {
