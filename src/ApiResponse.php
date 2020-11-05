@@ -9,68 +9,68 @@ use Illuminate\Support\Str;
 /**
  * Class ApiResponse.
  *
- * @method JsonResponse continue(array $data = [], string $message = null)
- * @method JsonResponse switchingProtocols(array $data = [], string $message = null)
- * @method JsonResponse processing(array $data = [], string $message = null)
- * @method JsonResponse ok(array $data = [], string $message = null)
- * @method JsonResponse created(array $data = [], string $message = null)
- * @method JsonResponse accepted(array $data = [], string $message = null)
- * @method JsonResponse nonAuthoritativeInformation(array $data = [], string $message = null)
- * @method JsonResponse noContent(array $data = [], string $message = null)
- * @method JsonResponse resetContent(array $data = [], string $message = null)
- * @method JsonResponse partialContent(array $data = [], string $message = null)
- * @method JsonResponse multiStatus(array $data = [], string $message = null)
- * @method JsonResponse alreadyReported(array $data = [], string $message = null)
- * @method JsonResponse imUsed(array $data = [], string $message = null)
- * @method JsonResponse multipleChoices(array $data = [], string $message = null)
- * @method JsonResponse movedPermanently(array $data = [], string $message = null)
- * @method JsonResponse found(array $data = [], string $message = null)
- * @method JsonResponse seeOther(array $data = [], string $message = null)
- * @method JsonResponse notModified(array $data = [], string $message = null)
- * @method JsonResponse useProxy(array $data = [], string $message = null)
- * @method JsonResponse reserved(array $data = [], string $message = null)
- * @method JsonResponse temporaryRedirect(array $data = [], string $message = null)
- * @method JsonResponse permanentRedirect(array $data = [], string $message = null)
- * @method JsonResponse badRequest(array $data = [], string $message = null)
- * @method JsonResponse unauthorized(array $data = [], string $message = null)
- * @method JsonResponse paymentRequired(array $data = [], string $message = null)
- * @method JsonResponse forbidden(array $data = [], string $message = null)
- * @method JsonResponse notFound(array $data = [], string $message = null)
- * @method JsonResponse methodNotAllowed(array $data = [], string $message = null)
- * @method JsonResponse notAcceptable(array $data = [], string $message = null)
- * @method JsonResponse proxyAuthenticationRequired(array $data = [], string $message = null)
- * @method JsonResponse requestTimeout(array $data = [], string $message = null)
- * @method JsonResponse conflict(array $data = [], string $message = null)
- * @method JsonResponse gone(array $data = [], string $message = null)
- * @method JsonResponse lengthRequired(array $data = [], string $message = null)
- * @method JsonResponse preconditionFailed(array $data = [], string $message = null)
- * @method JsonResponse payloadTooLarge(array $data = [], string $message = null)
- * @method JsonResponse uriTooLong(array $data = [], string $message = null)
- * @method JsonResponse unsupportedMediaType(array $data = [], string $message = null)
- * @method JsonResponse rangeNotSatisfiable(array $data = [], string $message = null)
- * @method JsonResponse expectationFailed(array $data = [], string $message = null)
- * @method JsonResponse imATeapot(array $data = [], string $message = null)
- * @method JsonResponse misdirectedRequest(array $data = [], string $message = null)
- * @method JsonResponse unprocessableEntity(array $data = [], string $message = null)
- * @method JsonResponse locked(array $data = [], string $message = null)
- * @method JsonResponse failedDependency(array $data = [], string $message = null)
- * @method JsonResponse tooEarly(array $data = [], string $message = null)
- * @method JsonResponse upgradeRequired(array $data = [], string $message = null)
- * @method JsonResponse preconditionRequired(array $data = [], string $message = null)
- * @method JsonResponse tooManyRequests(array $data = [], string $message = null)
- * @method JsonResponse requestHeaderFieldsTooLarge(array $data = [], string $message = null)
- * @method JsonResponse unavailableForLegalReasons(array $data = [], string $message = null)
- * @method JsonResponse internalServerError(array $data = [], string $message = null)
- * @method JsonResponse notImplemented(array $data = [], string $message = null)
- * @method JsonResponse badGateway(array $data = [], string $message = null)
- * @method JsonResponse serviceUnavailable(array $data = [], string $message = null)
- * @method JsonResponse gatewayTimeout(array $data = [], string $message = null)
- * @method JsonResponse versionNotSupported(array $data = [], string $message = null)
- * @method JsonResponse variantAlsoNegotiates(array $data = [], string $message = null)
- * @method JsonResponse insufficientStorage(array $data = [], string $message = null)
- * @method JsonResponse loopDetected(array $data = [], string $message = null)
- * @method JsonResponse notExtended(array $data = [], string $message = null)
- * @method JsonResponse networkAuthenticationRequired(array $data = [], string $message = null)
+ * @method JsonResponse continue($data = [], string $message = null)
+ * @method JsonResponse switchingProtocols($data = [], string $message = null)
+ * @method JsonResponse processing($data = [], string $message = null)
+ * @method JsonResponse ok($data = [], string $message = null)
+ * @method JsonResponse created($data = [], string $message = null)
+ * @method JsonResponse accepted($data = [], string $message = null)
+ * @method JsonResponse nonAuthoritativeInformation($data = [], string $message = null)
+ * @method JsonResponse noContent($data = [], string $message = null)
+ * @method JsonResponse resetContent($data = [], string $message = null)
+ * @method JsonResponse partialContent($data = [], string $message = null)
+ * @method JsonResponse multiStatus($data = [], string $message = null)
+ * @method JsonResponse alreadyReported($data = [], string $message = null)
+ * @method JsonResponse imUsed($data = [], string $message = null)
+ * @method JsonResponse multipleChoices($data = [], string $message = null)
+ * @method JsonResponse movedPermanently($data = [], string $message = null)
+ * @method JsonResponse found($data = [], string $message = null)
+ * @method JsonResponse seeOther($data = [], string $message = null)
+ * @method JsonResponse notModified($data = [], string $message = null)
+ * @method JsonResponse useProxy($data = [], string $message = null)
+ * @method JsonResponse reserved($data = [], string $message = null)
+ * @method JsonResponse temporaryRedirect($data = [], string $message = null)
+ * @method JsonResponse permanentRedirect($data = [], string $message = null)
+ * @method JsonResponse badRequest($data = [], string $message = null)
+ * @method JsonResponse unauthorized($data = [], string $message = null)
+ * @method JsonResponse paymentRequired($data = [], string $message = null)
+ * @method JsonResponse forbidden($data = [], string $message = null)
+ * @method JsonResponse notFound($data = [], string $message = null)
+ * @method JsonResponse methodNotAllowed($data = [], string $message = null)
+ * @method JsonResponse notAcceptable($data = [], string $message = null)
+ * @method JsonResponse proxyAuthenticationRequired($data = [], string $message = null)
+ * @method JsonResponse requestTimeout($data = [], string $message = null)
+ * @method JsonResponse conflict($data = [], string $message = null)
+ * @method JsonResponse gone($data = [], string $message = null)
+ * @method JsonResponse lengthRequired($data = [], string $message = null)
+ * @method JsonResponse preconditionFailed($data = [], string $message = null)
+ * @method JsonResponse payloadTooLarge($data = [], string $message = null)
+ * @method JsonResponse uriTooLong($data = [], string $message = null)
+ * @method JsonResponse unsupportedMediaType($data = [], string $message = null)
+ * @method JsonResponse rangeNotSatisfiable($data = [], string $message = null)
+ * @method JsonResponse expectationFailed($data = [], string $message = null)
+ * @method JsonResponse imATeapot($data = [], string $message = null)
+ * @method JsonResponse misdirectedRequest($data = [], string $message = null)
+ * @method JsonResponse unprocessableEntity($data = [], string $message = null)
+ * @method JsonResponse locked($data = [], string $message = null)
+ * @method JsonResponse failedDependency($data = [], string $message = null)
+ * @method JsonResponse tooEarly($data = [], string $message = null)
+ * @method JsonResponse upgradeRequired($data = [], string $message = null)
+ * @method JsonResponse preconditionRequired($data = [], string $message = null)
+ * @method JsonResponse tooManyRequests($data = [], string $message = null)
+ * @method JsonResponse requestHeaderFieldsTooLarge($data = [], string $message = null)
+ * @method JsonResponse unavailableForLegalReasons($data = [], string $message = null)
+ * @method JsonResponse internalServerError($data = [], string $message = null)
+ * @method JsonResponse notImplemented($data = [], string $message = null)
+ * @method JsonResponse badGateway($data = [], string $message = null)
+ * @method JsonResponse serviceUnavailable($data = [], string $message = null)
+ * @method JsonResponse gatewayTimeout($data = [], string $message = null)
+ * @method JsonResponse versionNotSupported($data = [], string $message = null)
+ * @method JsonResponse variantAlsoNegotiates($data = [], string $message = null)
+ * @method JsonResponse insufficientStorage($data = [], string $message = null)
+ * @method JsonResponse loopDetected($data = [], string $message = null)
+ * @method JsonResponse notExtended($data = [], string $message = null)
+ * @method JsonResponse networkAuthenticationRequired($data = [], string $message = null)
  */
 class ApiResponse
 {
@@ -109,23 +109,21 @@ class ApiResponse
 
     public function __call($name, $arguments)
     {
-        if (defined($this->statusCodesClass.'::HTTP_'.Str::upper(Str::snake($name)))) {
-            $code = (int) constant($this->statusCodesClass.'::HTTP_'.Str::upper(Str::snake($name)));
+        if (defined($this->statusCodesClass . '::HTTP_' . Str::upper(Str::snake($name)))) {
+            $code = (int)constant($this->statusCodesClass . '::HTTP_' . Str::upper(Str::snake($name)));
             // $data
-            if (! isset($arguments[0])) {
+            if (!isset($arguments[0])) {
                 $data = null;
-            } elseif (! is_array($arguments[0])) {
-                throw new \InvalidArgumentException('Data should type of array');
             } else {
                 $data = $arguments[0];
             }
 
             // $message
-            if (! isset($arguments[1])) {
+            if (!isset($arguments[1])) {
                 $manager = new \HttpStatusCodes\StatusCodeManager();
                 $statusCode = $manager->makeStatusCode($code);
                 $message = $statusCode->getMessage();
-            } elseif (! is_string($arguments[1])) {
+            } else if (!is_string($arguments[1])) {
                 throw new \InvalidArgumentException('Message should type of string');
             } else {
                 $message = $arguments[1];
@@ -136,7 +134,7 @@ class ApiResponse
             return call_user_func_array([$this, 'send'], [$data, $code]);
         }
 
-        throw new \BadMethodCallException('Static method: "'.$name.'" not exists');
+        throw new \BadMethodCallException('Static method: "' . $name . '" not exists');
     }
 
     protected function generateDefaultMeta()
@@ -146,21 +144,21 @@ class ApiResponse
         }
 
         if (is_callable($this->defaultMeta)) {
-            return (array) ($this->defaultMeta)();
+            return (array)($this->defaultMeta)();
         }
 
         return [
-            'version' => env('API_VERSION', config('laravel-api-response.api_version', '0')),
+            'version'     => env('API_VERSION', config('laravel-api-response.api_version', '0')),
             'environment' => app()->environment(),
         ];
     }
 
     /**
-     * @param array|null $data
+     * @param mixed $data
      * @param int|null $code
      * @return \Illuminate\Http\JsonResponse
      */
-    public function send(?array $data = null, ?int $code = null): JsonResponse
+    public function send($data = null, ?int $code = null): JsonResponse
     {
         if ($data) {
             $this->setData($data);
@@ -201,7 +199,7 @@ class ApiResponse
 
     public function includeMessage($includeMessage)
     {
-        $this->includeMessage = (bool) $includeMessage;
+        $this->includeMessage = (bool)$includeMessage;
 
         return $this;
     }
@@ -215,7 +213,7 @@ class ApiResponse
 
     public function includeMeta($includeMeta)
     {
-        $this->includeMeta = (bool) $includeMeta;
+        $this->includeMeta = (bool)$includeMeta;
 
         return $this;
     }
@@ -236,7 +234,7 @@ class ApiResponse
 
     public function dataOnTopLevel($dataOnTopLevel)
     {
-        $this->dataOnTopLevel = (bool) $dataOnTopLevel;
+        $this->dataOnTopLevel = (bool)$dataOnTopLevel;
 
         return $this;
     }
@@ -284,12 +282,22 @@ class ApiResponse
     }
 
     /**
-     * @param array $data
+     * @param mixed $data
      * @return ApiResponse
      */
-    public function setData(array $data): self
+    public function setData($data): self
     {
-        $this->data = $data;
+        if (is_array($data)) {
+            $this->data = $data;
+        } else if (is_object($data)) {
+            if (is_subclass_of($data, 'Illuminate\Http\Resources\Json\JsonResource')) {
+                $this->data = $data->toArray(request());
+            } else {
+                $this->data = (array)$data;
+            }
+        } else {
+            $this->data = [$data];
+        }
 
         return $this;
     }

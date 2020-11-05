@@ -20,6 +20,11 @@ composer require yaroslawww/laravel-api-response
 API_VERSION="1.1"
 ```
 
+You can publish the config file with:
+```bash
+php artisan vendor:publish --provider="Gcsc\LaravelApiResponse\ApiResponseProvider" --tag="config"
+```
+
 ## Usage
 
 ```php
@@ -31,6 +36,12 @@ Route::get('/', function () {
 Route::get('/', function (Request $request) {
     $note = Note::create(['text' => $request->text]);
     return ApiResponse::created($note, 'New note created!');
+});
+```
+verssion >= 2.0 support laravel Resource object
+```php
+Route::get('/api/profile', function (Request $request) {
+    return ApiResponse::created(new \App\Http\Resources\User\Profile($request->user()));
 });
 ```
 
